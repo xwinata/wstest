@@ -2,9 +2,9 @@ package stringutils
 
 import "fmt"
 
-// HelloWorld returns a greeting message
-func HelloWorld(name string) string {
-	return fmt.Sprintf("Hello, %s!", name)
+// HelloWorld returns a customizable greeting message
+func HelloWorld(name, greeting string) string {
+	return fmt.Sprintf("%s, %s!", greeting, name)
 }
 
 // Reverse returns the reversed string
@@ -18,5 +18,5 @@ func Reverse(s string) string {
 
 // Version returns the module version
 func Version() string {
-	return "v1.0.0"
+	return "v2.0.0"
 }
