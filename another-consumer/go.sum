@@ -1,0 +1,4 @@
+github.com/xwinata/wstest/mathutils v1.0.1 h1:vVlWcOHeJ9UQ7W6JS3vcDttljbQui8qNeJipWjjIR1Q=
+github.com/xwinata/wstest/mathutils v1.0.1/go.mod h1:weSL0QITIY7Qus3gkT3JTPlBPjgXGhBOqnx9/v/E/n0=
+github.com/xwinata/wstest/stringutils/v2 v2.0.0 h1:ueF7ylavXrOk51C3zkwnQvhRHjHlskXTdTSMbNKNGDk=
+github.com/xwinata/wstest/stringutils/v2 v2.0.0/go.mod h1:7nf3YweQeSimF00P1h3826cSdpBWeV5msfJZPj/G1Q4=

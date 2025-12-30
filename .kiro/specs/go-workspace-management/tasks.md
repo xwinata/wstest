@@ -58,8 +58,8 @@ This implementation plan creates a simple Go multi-module repository learning sy
   - **Property 2: Simple Module Functionality**
   - **Validates: Requirements 2.1, 2.2, 2.3, 2.4**
 
-- [-] 4. Create initial module versions and tags
-  - [-] 4.1 Tag initial versions
+- [x] 4. Create initial module versions and tags
+  - [x] 4.1 Tag initial versions
     - Commit initial mathutils and stringutils implementations
     - Create Git tag mathutils/v1.0.0
     - Create Git tag stringutils/v1.0.0
@@ -70,13 +70,13 @@ This implementation plan creates a simple Go multi-module repository learning sy
     - **Property 3: Independent Versioning**
     - **Validates: Requirements 3.1, 3.2, 3.3, 3.4**
 
-- [ ] 5. Create external consumer application
-  - [ ] 5.1 Set up external consumer directory
+- [x] 5. Create external consumer application
+  - [x] 5.1 Set up external consumer directory
     - Create ../consumer-app/ directory outside main repository
     - Initialize with `go mod init github.com/external-user/consumer-app`
     - _Requirements: 7.1, 7.2_
 
-  - [ ] 5.2 Implement consumer application
+  - [x] 5.2 Implement consumer application
     - Create main.go that imports both mathutils and stringutils
     - Use mathutils.Add() and stringutils.HelloWorld() functions
     - Show version information from both modules
@@ -88,34 +88,34 @@ This implementation plan creates a simple Go multi-module repository learning sy
     - Verify version constraints are respected
     - _Requirements: 7.1_
 
-- [ ] 6. Checkpoint - Verify basic functionality
+- [x] 6. Checkpoint - Verify basic functionality
   - Ensure both modules build and test successfully
   - Verify external consumer works with initial versions
   - Test workspace development experience
   - Ask the user if questions arise
 
-- [ ] 7. Simulate bug fix in mathutils
-  - [ ] 7.1 Introduce and fix bug in mathutils
+- [x] 7. Simulate bug fix in mathutils
+  - [x] 7.1 Introduce and fix bug in mathutils
     - Temporarily introduce a bug in Add function (e.g., return a + b + 1)
     - Fix the bug and update Version() to return "v1.0.1"
     - Commit changes and tag as mathutils/v1.0.1
     - _Requirements: 5.1_
 
-  - [ ] 7.2 Demonstrate selective upgrade
+  - [x] 7.2 Demonstrate selective upgrade
     - Update consumer-app to use mathutils v1.0.1
     - Keep stringutils at v1.0.0 to show independence
     - Verify consumer gets bug fix without other changes
     - _Requirements: 5.3, 5.4_
 
-- [ ] 8. Simulate breaking change in stringutils
-  - [ ] 8.1 Introduce breaking change
+- [x] 8. Simulate breaking change in stringutils
+  - [x] 8.1 Introduce breaking change
     - Change HelloWorld(name string) to HelloWorld(name, greeting string)
     - Update implementation to use custom greeting
     - Update Version() to return "v2.0.0"
     - Commit changes and tag as stringutils/v2.0.0
     - _Requirements: 4.1, 4.2_
 
-  - [ ] 8.2 Show breaking change isolation
+  - [x] 8.2 Show breaking change isolation
     - Verify that consumer-app still works with stringutils v1.0.0
     - Demonstrate that mathutils v1.0.1 is unaffected by stringutils changes
     - Show how consumer can choose to stay on v1.0.0 to avoid breaking changes
@@ -125,13 +125,13 @@ This implementation plan creates a simple Go multi-module repository learning sy
     - **Property 4: Breaking Change Isolation**
     - **Validates: Requirements 4.1, 4.2, 4.3, 4.4**
 
-- [ ] 9. Create second external consumer with different version choices
-  - [ ] 9.1 Set up another external consumer
+- [x] 9. Create second external consumer with different version choices
+  - [x] 9.1 Set up another external consumer
     - Create ../another-consumer/ directory
     - Initialize with `go mod init github.com/another-user/another-consumer`
     - _Requirements: 7.1_
 
-  - [ ] 9.2 Implement consumer with different version strategy
+  - [x] 9.2 Implement consumer with different version strategy
     - Use mathutils v1.0.1 (latest with bug fix)
     - Use stringutils v2.0.0 (adopt breaking changes)
     - Show how to handle the new HelloWorld signature
